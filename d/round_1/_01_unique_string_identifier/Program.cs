@@ -94,4 +94,5 @@ namespace unique_string_identifier
             Console.WriteLine(timer.ElapsedTicks);
         }
     }
+
 }
