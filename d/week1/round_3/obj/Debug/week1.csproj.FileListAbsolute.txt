@@ -1,0 +1,6 @@
+C:\codes\vs2015\week1\week1\bin\Debug\week1.exe.config
+C:\codes\vs2015\week1\week1\bin\Debug\week1.exe
+C:\codes\vs2015\week1\week1\bin\Debug\week1.pdb
+C:\codes\vs2015\week1\week1\obj\Debug\week1.csprojResolveAssemblyReference.cache
+C:\codes\vs2015\week1\week1\obj\Debug\week1.exe
+C:\codes\vs2015\week1\week1\obj\Debug\week1.pdb
