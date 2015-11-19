@@ -1,0 +1,6 @@
+C:\codes\vs2015\w1q5_bitwise_manipulation\w1q5_bitwise_manipulation\bin\Debug\w1q5_bitwise_manipulation.exe.config
+C:\codes\vs2015\w1q5_bitwise_manipulation\w1q5_bitwise_manipulation\obj\Debug\w1q5_bitwise_manipulation.csprojResolveAssemblyReference.cache
+C:\codes\vs2015\w1q5_bitwise_manipulation\w1q5_bitwise_manipulation\bin\Debug\w1q5_bitwise_manipulation.exe
+C:\codes\vs2015\w1q5_bitwise_manipulation\w1q5_bitwise_manipulation\bin\Debug\w1q5_bitwise_manipulation.pdb
+C:\codes\vs2015\w1q5_bitwise_manipulation\w1q5_bitwise_manipulation\obj\Debug\w1q5_bitwise_manipulation.exe
+C:\codes\vs2015\w1q5_bitwise_manipulation\w1q5_bitwise_manipulation\obj\Debug\w1q5_bitwise_manipulation.pdb
