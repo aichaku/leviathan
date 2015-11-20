@@ -11,39 +11,26 @@ namespace w1q5_bitwise_manipulation
     {
         private Int32 i;
 
+        public Bit32(int v)
+        {
+            i = v;
+            // Console.WriteLine(Convert.ToString(i, 2));
+        }
+
         public Int32 v
         {
             get { return i; }
-            set { i = value; }
         }
 
-        public String toString()
+        public void insert(Int32 other, int begin, int end)
         {
+            i |= (other <<= end);
+        }
 
-            /*
-            string s = i.ToString();
-            string s = Convert.ToString(i);
-            string s = string.Format("{0}", i);
-            string s = "" + i;
-            string s = string.Empty + i;
-            string s = new StringBuilder().Append(i).ToString();
-            */
-
-            StringBuilder builder = new StringBuilder();
-
-            for (int m = 0; m < 32; m++)
-            {
-                if (true) //(i & (1 << m))
-                {
-                    builder.Append(1);
-                } else
-                {
-                    builder.Append(0);
-                }
-            }
-
-
-            return i.ToString();
+        override
+        public String ToString()
+        {
+            return Convert.ToString(i, 2);
         }
     }
     class Program
@@ -51,6 +38,9 @@ namespace w1q5_bitwise_manipulation
         static void Main(string[] args)
         {
 
+            Bit32 i = new Bit32(Convert.ToInt32("01101101", 2));
+            i.insert(Convert.ToInt32("1011", 2), 2, 4);
+            Console.WriteLine(i.ToString());
         }
     }
 }
