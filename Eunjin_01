@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CheckDuplication
+{
+    class Program
+    {
+        static string test = "lskjwpoeav,b294qza";
+        static char[] pool = test.ToArray<char>();
+
+        static void Main(string[] args)
+        {
+            Print(pool);
+            Debug.WriteLine(Sort(0, pool.Length - 1));
+        }
+
+        private static bool Sort(int left, int right)
+        {
+            if (left >= right)
+                return true;
+
+            int pivot = left++;
+            int savedRight = right;
+
+            while (left < right)
+            {
+                while (pool[left] <= pool[pivot] && left < savedRight)
+                {
+                    if (pool[left] == pool[pivot])
+                        return false;
+
+                    left++;
+                }
+
+                while (pool[right] > pool[pivot] && right > pivot + 1)
+                    right--;
+
+                if (left < right && pool[left] > pool[right])
+                {
+                    Swap(ref pool[right], ref pool[left]);
+                }
+            }
+
+            if (pool[pivot] > pool[right])
+            {
+                Swap(ref pool[pivot], ref pool[right]);
+                Swap(ref pivot, ref right);
+                Print(pool);
+            }
+
+            return Sort(right, pivot - 1) && Sort(pivot + 1, savedRight);
+        }
+
+        private static void Swap<T>(ref T a, ref T b)
+        {
+            T temp = b;
+            b = a;
+            a = temp;
+        }
+
+        private static void Print(char[] arr)
+        {
+            foreach (char a in arr)
+            {
+                Debug.Write(a.ToString() + " ");
+            }
+
+            Debug.WriteLine("");
+        }
+    }
+}
